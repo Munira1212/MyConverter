@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image: url('https://earthobservatory.nasa.gov/ContentWOC/images/globaltemp/global_gis_1880-1884.png');
+            background-repeat: no-repeat;-
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+
+        #F2C form input {
+            margin-bottom: 4px;
+        }
+        #C2F form input {
+            margin-bottom: 4px;
+        }
+        #C2F, #F2C{
+          display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+        <form action="/index" method="post">
+          <h1>
+              <label> Enter temparature: </label>
+          </h1>
+            <input type ="text" name="temparture" placeholder="temparture">
+
+            <p> Conved to: <span th:text="${res}"/> </p>
+
+            <div id=C2F>
+                <br><input type="submit" name="type" value="C2F" Style ="Color: lawngreen"><br/>
+            </div>
+
+            <div id=F2C>
+                <br><input type="submit" name="type" value="F2C" Style ="Color: deepskyblue"><br/>
+            </div>
+
+
+
+</form>
+</body>
+</html>
